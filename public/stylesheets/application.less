@@ -1,0 +1,309 @@
+/* -------------------------------------------------------------- 
+  
+   reset.css
+   * Resets default browser CSS.
+   
+-------------------------------------------------------------- */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, code,
+del, dfn, em, img, q, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  outline: 0;
+}
+
+body { 
+  line-height: 1.5; 
+}
+
+/* Tables still need 'cellspacing="0"' in the markup. */
+table { border-collapse: separate; border-spacing: 0; }
+caption, th, td { text-align: left; font-weight: normal; }
+table, td, th { vertical-align: middle; }
+
+/* Remove possible quote marks (") from <q>, <blockquote>. */
+blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+blockquote, q { quotes: "" ""; }
+
+/* Remove annoying border on linked images. */
+a img { border: none; }
+
+/* -------
+COLORS:
+------- */
+
+@cream: #E8DDCB;
+@terra: #CDB380;
+@thera: #65583E;
+@acqua: #036564;
+@profo: #033649;
+@abiso: #031634;
+
+@pri-family: Georgia, serif;
+@sec-family: "Lucida Grande", Calibri, Verdana, Helvetica, Arial, sans-serif;
+
+html, body {height: 100%;}
+
+body {
+  background: @cream url(/images/texture.gif) repeat top left;
+  font-family: @pri-family;
+}
+
+a {
+  color: @acqua;
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom: 1px solid @acqua;
+}
+
+a:active {
+  border-bottom: 2px solid @acqua;
+}
+
+#bg {
+  position:absolute;
+  top:0;
+  left:0;
+  height: 100%;
+  width: 100%;
+  background: transparent url(/images/bg.gif) repeat-x top left;
+}
+
+#wrap {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 15px 0 15px;
+  min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -30px; /* the bottom margin is the negative value of the footer's height */
+}
+
+.footer, .push {
+	height: 30px; /* .push must be the same height as .footer */
+}
+
+
+.brand {
+  font-family: @pri-family !important;
+  font-size: 110%;
+}
+
+.small {
+  font-family: @sec-family;
+  font-size: 10px;
+  color: @thera;
+}
+
+.footer {
+  background: @profo;
+  text-align: center;
+  color: @cream;
+  font-size: 12px;
+  p {
+    padding-top:5px;
+    font-family: @sec-family;
+  }
+}
+
+
+
+h1 {
+  width: 275px;
+  height: 67px;
+  background: url(/images/logo.gif) 0 10px no-repeat;
+  text-indent: -9999px;
+}
+
+#placeholder {
+  font-family: @sec-family;
+  color: @profo;
+  float:right;
+  margin-top: -55px;
+  top: -50px;
+  width: 500px;
+  height: 50px;
+  font-size: 12px;
+  p {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    line-height: 23px;
+  }
+}
+
+#last-entry {
+  margin: 20px 0 0 0;
+  a {
+    color: @terra;
+  }
+  a:hover {
+    border-bottom: 1px solid @terra;
+  }
+  a:active {
+    border-bottom: 2px solid @terra;
+  }
+}
+
+#last-tweet {
+  height: 120px;
+  width: 800px;
+  color: @cream;
+  font-size: 24px;
+  padding-top: 31px;
+  line-height: 35px;
+  text-shadow: 1px 1px 1px @acqua;
+  font-style: italic;
+}
+
+/* DEPRECATED
+#last-avatar {
+  width: 110px;
+  height: 140px;
+  background: #fff;
+  border: 2px solid @abiso;
+  float: right;
+  img {
+    margin: 4px 0 0 4px;
+  }
+  p {
+    font-family: casual;
+    font-size: 16px !important;
+    color: @acqua;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+*/
+
+#last-avatar {
+  margin: 25px 0 0 0;
+  a:hover {
+   border: none; 
+  }
+  a:active {
+    border: none;
+  }
+}
+
+#pitch {
+  width: 960px;
+  height: 55px;
+  background: url(/images/pitch.gif) center 12px no-repeat;
+  text-indent:-9999px;
+  margin-top:4px;
+}
+
+#pitch:active {
+  background: url(/images/pitch.gif) center 14px no-repeat;
+}
+
+.float-left {
+  float:left;
+}
+
+.float-right {
+  float:right;
+}
+
+.avatar {
+  width: 57px;
+  height: 73px;
+  border: 1px solid @abiso;
+  margin: 0 10px 0 10px;
+  background: #fff;
+  text-align: center;
+  a:hover {
+   border: none; 
+  }
+  a:active {
+    border: none;
+  }
+  img {
+    margin: 2px 0 0 0;
+    width: 53px;
+    height: 53px;
+  }
+  p {
+    font-size: 10px;
+    color: @acqua;
+    font-family: casual;
+    text-transform: uppercase;
+    text-align:center;
+    margin-top: -5px;
+  }
+}
+
+.entry {
+  width: 100%;
+  height:95px;
+  margin-top:5px;
+  padding-top: 5px;
+}
+
+/* Implement better hovers
+.entry:hover {
+  background: @terra;
+}
+
+*/
+
+.tweet {
+  margin: 0 0 0 10px;
+  padding-top: 7px;
+  text-shadow: 0 -2px 1px #FFF;
+}
+
+#recent {
+  margin-top: 20px;
+  color: @profo;
+}
+
+hr {
+  display:none;
+}
+
+.hr {
+  margin: 0 40px 0 40px;
+  border-top: 1px solid @terra;
+  border-bottom: 1px solid #fff;
+}
+
+h3 {
+  font-family: Rockwell, Georgia;
+  background: url(/images/header-bg.gif);
+  border: 1px solid #7d5d1e;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+  color: @profo;
+  line-height: 28px;
+  letter-spacing: 3px;
+}
+
+h3#recent-tweets-heading {
+  width: 160px;
+  margin-top: 10px;
+}
+
+h3#last-tweet-heading {
+  position:relative;
+  top:40px;
+  width: 130px;
+}
+
+#wd {
+    background: @cream url(/images/wrap-texture.gif) repeat-y center top;
+}
+

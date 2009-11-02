@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Sauditweets</title>
+	<meta name="keywords" content="Saudi Arabia, Saudi, Twitter, Tweets, Sauditweets">
+	<meta name="description" content="Twitter lens for Saudi Arabia. ">
+	<meta name="copyright" content="September 2009">
+	<meta name="author" content="Rizwan Reza">
+	<!-- Date: 2009-09-09 -->
+	<%= stylesheet_link_tag "application" %>
+</head>
+<body>
+  <div id="bg">
+    <div id="wrap">
+      <div id="header">
+        <h1>Sauditweets</h1>
+        <div id="placeholder">
+          <p><strong>Salam 'Alaykum!</strong><br> When you need to know what's happening around, <span class="brand">Sauditweets</span> is the right click! The new and easiest way to find out tweets by Saudis from Twitter.</p>
+        </div>
+      </div>
+      
+        <h3 id="last-tweet-heading">Last Tweet</h3>
+  
+      <%= render :partial => 'last_tweet' %>
+    
+        <a href="http://www.twitter.com/sauditweets"><h2 id="pitch">Follow @SaudiTweets on Twitter to get your tweets here.</h2></a>
+
+      <h3 id="recent-tweets-heading">Recent Tweets</h3>
+    
+      <div id="recent">
+        <%= yield %>
+      </div>
+      
+
+      <div class="push"></div>
+    </div>
+    <div class="footer">
+      <p>&copy; 2009 Sauditweets.com. SaudiTweets is not responsible for the content presented here. </p>
+    </div>
+  </div>
+  <script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+  document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+  <script type="text/javascript">
+  try {
+  var pageTracker = _gat._getTracker("UA-10618437-1");
+  pageTracker._trackPageview();
+  } catch(err) {}</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  status: MyText
+  status_id: MyString
+  status_created_at: 2009-09-11 00:12:35
+  tweeters_id: MyString
+  tweeters_name: MyString
+  tweeters_photo: MyString
+  tweeters_screen_name: MyString
+
+two:
+  status: MyText
+  status_id: MyString
+  status_created_at: 2009-09-11 00:12:35
+  tweeters_id: MyString
+  tweeters_name: MyString
+  tweeters_photo: MyString
+  tweeters_screen_name: MyString

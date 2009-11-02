@@ -1,0 +1,21 @@
+<% @tweets.each do |tweet|  %>
+  <% next if tweet == @last_tweet %>
+  <div id="tweet-<%= tweet.status_id %>" class="entry">
+    <div class="avatar <%= cycle('float-left', 'float-right') %>">
+      <a href="http://www.twitter.com/<%= tweet.tweeters_screen_name %>">
+        <img src="<%= tweet.tweeters_photo %>">
+        <p><%= tweet.tweeters_name.split(' ').first[0..8] %></p>
+      </a>
+    </div>
+    <p class="tweet small">
+      <a href="http://www.twitter.com/<%= tweet.tweeters_screen_name %>/status/<%= tweet.status_id %>">
+      <%= time_ago_in_words(tweet.status_created_at).capitalize %></a> ago, <a href="http://www.twitter.com/<%= tweet.tweeters_screen_name %>"><%= tweet.tweeters_name %></a> said:
+    </p>
+    <p class="tweet"><%= auto_link(tweet.status) %></p>
+  </div>
+  <% if @tweets.last != tweet %>
+  <div class="hr">
+    <hr>
+  </div>
+  <% end %>
+<% end %>

@@ -1,0 +1,9 @@
+<div id="last-entry">
+  <div id="last-avatar" class="avatar float-right">
+    <a href="http://www.twitter.com/<%= @last_tweet.tweeters_screen_name %>">
+      <img src="<%= @last_tweet.tweeters_photo %>">
+      <p><%= @last_tweet.tweeters_name.split(' ').first[0..8] %></p>
+    </a>
+  </div>
+  <p id="last-tweet"><%= auto_link(@last_tweet.status) %></p>
+</div>
